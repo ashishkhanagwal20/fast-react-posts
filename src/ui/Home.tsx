@@ -3,6 +3,7 @@
 import { useAuth } from '../services/useAuth';
 import Blogs from '../features/blogs/Blogs';
 import LinkButton from './LinkButton';
+import Users from '../features/users/Users';
 const Home = (): JSX.Element => {
   const { isAuthenticated } = useAuth();
   console.log("isAuthenticated>>>>>>",isAuthenticated );
@@ -11,6 +12,9 @@ const Home = (): JSX.Element => {
       {isAuthenticated ? (
         <div>
         <Blogs/>
+        <aside className="w-64 bg-gray-100">
+          <Users />
+        </aside>
         </div>
       ) : (
         <div className='my-10 px-4 text-center sm:my-16'>
@@ -20,6 +24,7 @@ const Home = (): JSX.Element => {
           </h2>
         </div>
       )}
+      
     </div>
   );
 };
