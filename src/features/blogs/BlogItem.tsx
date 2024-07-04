@@ -34,7 +34,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ post }) => {
           <i>Posted on: {new Date(Post.created_at).toLocaleString()}</i>
         </p>
         <p className="text-sm text-gray-600">
-          <strong>Votes:</strong> {votes}
+          <button className='border bg-stone-800'>Votes:</button> {votes}
         </p>
       </div>
     </div>
