@@ -81,7 +81,8 @@ import SignupForm from './features/auth/SignupForm';
 import { AuthProvider } from './services/Authcontext';
 import { useAuth } from './services/useAuth';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
+// import { useEffect } from 'react';
+// import { VoteProvider } from './services/VoteContext';
 // Initialize react-query's QueryClient
 const queryClient = new QueryClient();
 
@@ -133,11 +134,14 @@ const router = createBrowserRouter([
 
 // Main App component
 const App = (): JSX.Element => {
+  
   return (
     <AuthProvider> {/* Ensure AuthProvider wraps your entire application */}
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
+        
+          <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+          </QueryClientProvider>
+        
     </AuthProvider>
   );
 };

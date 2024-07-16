@@ -33,7 +33,7 @@ const LoginForm = (): JSX.Element => {
 
       // Store the token in localStorage
       localStorage.setItem('fastaccessToken', data.access_token);
-      login();
+      login(data.access_token);
       // Navigate to another page after successful login
       navigate('/');
     } catch (err: unknown) {

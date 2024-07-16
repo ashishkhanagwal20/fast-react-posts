@@ -10,7 +10,7 @@ export const fetchusers = async (): Promise<UserData[]> => {
         },
       });
       if (!response.ok) {
-        throw new Error('Failed to fetch blogs');
+        throw new Error('Failed to fetch Users');
       }
     
       return response.json();
